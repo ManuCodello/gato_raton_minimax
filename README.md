@@ -8,7 +8,7 @@
 
 Este es un juego estratégico tipo laberinto donde un **Gato** (depredador) intenta atrapar a un **Ratón** (presa) que busca llegar al queso 🧀 para ganar. El tablero es una matriz 10x10 con obstáculos, y el juego puede jugarse en distintos modos: jugador vs máquina, jugador vs jugador o máquina vs máquina (¡batalla épica de IA!).
 
-El juego usa el algoritmo **Minimax** para la IA, con evaluaciones heurísticas para decidir los mejores movimientos, simulando una batalla táctica entre cazador y presa.
+El juego usa el algoritmo **Minimax**, con evaluaciones heurísticas para decidir los mejores movimientos, simulando una batalla táctica entre cazador y presa.
 
 ---
 
@@ -21,7 +21,7 @@ El juego usa el algoritmo **Minimax** para la IA, con evaluaciones heurísticas 
   - Jugador vs Jugador
   - Máquina vs Máquina
 - Elección de personaje: Gato o Ratón (cuando hay jugador humano).
-- IA basada en algoritmo Minimax con profundidad ajustable.
+- Algoritmo Minimax con profundidad ajustable.
 - Decoración visual del tablero con emojis para fácil lectura.
 - Control de turnos y límite máximo para evitar partidas infinitas.
 - Evaluaciones heurísticas para decisiones inteligentes del gato y ratón.
@@ -61,9 +61,44 @@ El juego usa el algoritmo **Minimax** para la IA, con evaluaciones heurísticas 
 
 ---
 
+📦 Estructura del Proyecto
+bash
+Copiar
+Editar
+gato_raton/
+│
+├── juego_gato_raton.py     # Lógica principal del juego
+├── README.md               # Este archivo
+
+🚀 ¿Cómo Ejecutarlo?
+Asegurate de tener Python 3 instalado.
+
+Cloná el repositorio:
+
+bash
+Copiar
+Editar
+git clone https://github.com/tuusuario/gato-raton-juego.git
+cd gato-raton-juego
+Ejecutá el juego:
+
+bash
+Copiar
+Editar
+python juego_gato_raton.py
+
+⚙️ Funciones Clave
+generar_laberinto(): Genera el mapa con obstáculos y coloca estratégicamente al gato, ratón y queso.
+
+verificar_balance_juego(): Asegura que la partida sea justa.
+
+minimax_gato(): Calcula el mejor movimiento del gato simulando escenarios futuros.
+
+evaluar_posicion_*(): Evalúa la calidad de una posición según distancias y contexto.
+
 ## ¿Por qué este juego?
 
-Porque la programación no es solo escribir líneas, sino pensar estrategias y anticipar movimientos. Aquí entrenas la mente para resolver problemas y aplicar algoritmos clásicos de IA, con un toque divertido y visual.
+Porque la programación no es solo escribir líneas, sino pensar estrategias y anticipar movimientos. Aquí entrenas la mente para resolver problemas y aplicar algoritmos clásicos, con un toque divertido y visual.
 
 ---
 
@@ -71,7 +106,7 @@ Porque la programación no es solo escribir líneas, sino pensar estrategias y a
 
 Este proyecto es un gran playground para estudiantes de programación e IA. Puedes contribuir:
 
-- Mejorando la IA con poda alfa-beta.
+- Mejorando el algoritmo.
 - Añadiendo modos de dificultad.
 - Optimizando la generación del laberinto.
 - Mejorando la interfaz de usuario (por ejemplo, con GUI).
