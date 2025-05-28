@@ -61,19 +61,18 @@ El juego usa el algoritmo **Minimax**, con evaluaciones heurísticas para decidi
 
 ---
 
-📦 Estructura del Proyecto
+## 📦 Estructura del Proyecto
+
 bash
-Copiar
-Editar
 gato_raton/
 │
 ├── juego_gato_raton.py     # Lógica principal del juego
 ├── README.md               # Este archivo
 
-🚀 ¿Cómo Ejecutarlo?
+## 🚀 ¿Cómo Ejecutarlo?
 Asegurate de tener Python 3 instalado.
 
-Cloná el repositorio:
+### Cloná el repositorio:
 
 bash
 Copiar
@@ -87,7 +86,7 @@ Copiar
 Editar
 python juego_gato_raton.py
 
-⚙️ Funciones Clave
+## ⚙️ Funciones Clave
 generar_laberinto(): Genera el mapa con obstáculos y coloca estratégicamente al gato, ratón y queso.
 
 verificar_balance_juego(): Asegura que la partida sea justa.
