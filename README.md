@@ -1,105 +1,94 @@
-# gato_raton_minimax
-🧠 El Laberinto del Gato y el Ratón 🐭😼
-¡Bienvenido a El Laberinto del Gato y el Ratón!
-Un juego estratégico donde la astucia, la inteligencia artificial y la supervivencia se cruzan en un tablero de 10x10. Programado en Python.
+# 🧠 El Laberinto del Gato y el Ratón 🐭😼
 
-🎮 Modos de Juego
-👤 Jugador vs 🤖 Máquina: Elegí ser el gato (cazador) o el ratón (escapista) y enfrentate a una IA despiadada.
+**Un duelo de inteligencias en Python donde solo uno sobrevivirá.**
 
-👤 Jugador vs 👤 Jugador: Dos mentes humanas se enfrentan. ¿Quién dominará el tablero?
+---
 
-🤖 Máquina vs 🤖 Máquina: Observá cómo dos inteligencias artificiales se enfrentan en una batalla táctica.
+## Descripción
 
-🧩 Reglas del Juego
-El ratón (🐭) debe alcanzar el queso (🧀) para ganar.
+Este es un juego estratégico tipo laberinto donde un **Gato** (depredador) intenta atrapar a un **Ratón** (presa) que busca llegar al queso 🧀 para ganar. El tablero es una matriz 10x10 con obstáculos, y el juego puede jugarse en distintos modos: jugador vs máquina, jugador vs jugador o máquina vs máquina (¡batalla épica de IA!).
 
-El gato (😼) debe atrapar al ratón para ganar.
+El juego usa el algoritmo **Minimax** para la IA, con evaluaciones heurísticas para decidir los mejores movimientos, simulando una batalla táctica entre cazador y presa.
 
-El tablero tiene obstáculos aleatorios (🧱), por lo que cada partida es única.
+---
 
-Las posiciones iniciales son colocadas con distancias mínimas controladas para garantizar una partida justa.
+## Características Principales
 
-La partida tiene un límite de 50 turnos.
+- Tablero 10x10 con obstáculos colocados aleatoriamente.
+- Distancias iniciales balanceadas para asegurar juego justo.
+- Modos de juego:
+  - Jugador vs Máquina
+  - Jugador vs Jugador
+  - Máquina vs Máquina
+- Elección de personaje: Gato o Ratón (cuando hay jugador humano).
+- IA basada en algoritmo Minimax con profundidad ajustable.
+- Decoración visual del tablero con emojis para fácil lectura.
+- Control de turnos y límite máximo para evitar partidas infinitas.
+- Evaluaciones heurísticas para decisiones inteligentes del gato y ratón.
 
-🤖 Inteligencia Artificial
-El Gato y el Ratón pueden ser controlados por IA con heurísticas y algoritmo Minimax, que evalúan la mejor posición en función de distancias y puntuaciones.
+---
 
-Evaluaciones incluyen:
+## Cómo jugar
 
-Proximidad al objetivo (queso o presa).
+1. Ejecuta el script en un entorno Python 3.
+2. Elige el modo de juego:
+   - `1` para Jugador vs Máquina
+   - `2` para Jugador vs Jugador
+   - `3` para Máquina vs Máquina
+3. Si juegas contra la máquina, elige tu personaje: Gato o Ratón.
+4. El tablero se genera aleatoriamente con obstáculos, gato, ratón y queso.
+5. El juego avanza por turnos hasta que el gato atrape al ratón o el ratón llegue al queso, o se llegue al límite de turnos.
 
-Penalizaciones por estar cerca del enemigo.
+---
 
-Bonificaciones por estar cerca del objetivo.
+## Requisitos
 
-📦 Estructura del Proyecto
-bash
-Copiar
-Editar
-gato_raton/
-│
-├── juego_gato_raton.py     # Lógica principal del juego
-├── README.md               # Este archivo
-🚀 ¿Cómo Ejecutarlo?
-Asegurate de tener Python 3 instalado.
+- Python 3.x
+- No requiere librerías externas.
 
-Cloná el repositorio:
+---
 
-bash
-Copiar
-Editar
-git clone https://github.com/tuusuario/gato-raton-juego.git
-cd gato-raton-juego
-Ejecutá el juego:
+## Estructura del código
 
-bash
-Copiar
-Editar
-python juego_gato_raton.py
-¡Elegí el modo de juego y empezá la batalla de cerebros!
+- **Clase `JuegoGatoRaton`**: controla toda la lógica del juego.
+- Métodos para:
+  - Generar el laberinto y ubicar elementos con balance de distancias.
+  - Imprimir el tablero con emojis.
+  - Validar movimientos y calcular distancias Manhattan.
+  - Evaluar posiciones para el gato y el ratón (funciones heurísticas).
+  - Ejecutar Minimax para decisiones de IA.
+  - Control de turnos y reglas de victoria.
 
-📷 Ejemplo Visual del Tablero
-matlab
-Copiar
-Editar
-╔════════════════════════════════════════════════════╗
-║ 🌿 🌿 🌿 🧀 🌿 🧱 🌿 🌿 🌿 🌿 ║
-║ 🌿 🌿 🧱 🌿 🌿 🌿 🌿 🧱 🌿 🌿 ║
-║ 🌿 🐭 🌿 🌿 🌿 🧱 🌿 🌿 🐱 🌿 ║
-║ 🌿 🌿 🌿 🌿 🌿 🌿 🌿 🌿 🌿 🌿 ║
-║ ...                                               ║
-╚════════════════════════════════════════════════════╝
-🎲 Turno 3 | ¡El ratón se acerca al queso!
-⚙️ Funciones Clave
-generar_laberinto(): Genera el mapa con obstáculos y coloca estratégicamente al gato, ratón y queso.
+---
 
-verificar_balance_juego(): Asegura que la partida sea justa.
+## ¿Por qué este juego?
 
-minimax_gato(): Calcula el mejor movimiento del gato simulando escenarios futuros.
+Porque la programación no es solo escribir líneas, sino pensar estrategias y anticipar movimientos. Aquí entrenas la mente para resolver problemas y aplicar algoritmos clásicos de IA, con un toque divertido y visual.
 
-evaluar_posicion_*(): Evalúa la calidad de una posición según distancias y contexto.
+---
 
-🛠 Posibles Mejoras Futuras
-GUI con pygame o tkinter.
+## Para contribuir
 
-Sistema de puntajes y estadísticas.
+Este proyecto es un gran playground para estudiantes de programación e IA. Puedes contribuir:
 
-Dificultades ajustables para las IAs.
+- Mejorando la IA con poda alfa-beta.
+- Añadiendo modos de dificultad.
+- Optimizando la generación del laberinto.
+- Mejorando la interfaz de usuario (por ejemplo, con GUI).
 
-Más personajes y poderes especiales.
+---
 
-💡 Filosofía del Juego
-Este proyecto fue diseñado para aprender y aplicar:
+## Contacto
 
-Programación orientada a objetos
+Si quieres compartir ideas, dudas o mejoras, ¡aquí estoy! Vamos a romperla con código, sin excusas ni vueltas.
 
-Algoritmos de inteligencia artificial (Minimax)
+---
 
-Lógica de tableros
+**¡Prepárate para atrapar o escapar!**
 
-Diseño de sistemas balanceados
+---
 
-¡Si te gustó el juego, dejá una estrella y compartilo! ⭐
+*Código original y mantenido por: Manu, aprendiz y guerrero del código.*
 
-Hecho con pasión por el aprendizaje y la programación.
-Manu 👨‍💻
+
+
