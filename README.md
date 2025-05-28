@@ -65,9 +65,9 @@ El juego usa el algoritmo **Minimax**, con evaluaciones heurísticas para decidi
 
 bash
 gato_raton/
-│
-├── juego_gato_raton.py     # Lógica principal del juego
-├── README.md               # Este archivo
+-│
+-├── juego_gato_raton.py     # Lógica principal del juego
+-├── README.md               # Este archivo
 
 ## 🚀 ¿Cómo Ejecutarlo?
 Asegurate de tener Python 3 instalado.
