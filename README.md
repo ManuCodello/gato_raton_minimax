@@ -1,127 +1,81 @@
-# 🧠 El Laberinto del Gato y el Ratón 🐭😼
+# Cat & Mouse Maze – Minimax Duel  
+A strategic maze game in Python where the predator hunts and the prey escapes.  
 
-**Un duelo de inteligencias en Python donde solo uno sobrevivirá.**
+## 🎮 Project Overview  
+This is a Python-based strategic game titled *“Cat & Mouse Maze – Minimax Duel”*.  
+You control one of the characters (Mouse or Cat), and face off against a computer-controlled opponent driven by the **Minimax algorithm**.  
+The game emphasizes:  
+- Procedural maze generation with obstacles.  
+- Balanced starting positions and a clear goal (Mouse to reach cheese, Cat to catch).  
+- A turn-based duel of wits, combining game logic + AI.  
 
----
+## 🎯 Core Objectives  
+- Generate a 10×10 grid maze populated with obstacles, the cheese, the Mouse, and the Cat.  
+- Ensure fair start distances so gameplay is balanced.  
+- Implement three gameplay modes:  
+  - Player vs Machine  
+  - Player vs Player  
+  - Machine vs Machine  
+- Use the **Minimax** algorithm (with adjustable depth) to drive one of the characters’ strategy.  
+- Use emojis for board visualization (fun, clear) and keep the interface console-based for simplicity.  
 
-## Descripción
+## 🧰 Technologies & Tools  
+- **Python 3.x** — primary language.  
+- Standard Python libraries (no external dependencies required).  
+- Minimax algorithm implementing heuristic evaluations of positions.  
+- Data structures representing the board, distances (Manhattan), turn logic and win conditions.  
 
-Este es un juego estratégico tipo laberinto donde un **Gato** (depredador) intenta atrapar a un **Ratón** (presa) que busca llegar al queso 🧀 para ganar. El tablero es una matriz 10x10 con obstáculos, y el juego puede jugarse en distintos modos: jugador vs máquina, jugador vs jugador o máquina vs máquina (¡batalla épica de IA!).
-
-El juego usa el algoritmo **Minimax**, con evaluaciones heurísticas para decidir los mejores movimientos, simulando una batalla táctica entre cazador y presa.
-
----
-
-## Características Principales
-
-- Tablero 10x10 con obstáculos colocados aleatoriamente.
-- Distancias iniciales balanceadas para asegurar juego justo.
-- Modos de juego:
-  - Jugador vs Máquina
-  - Jugador vs Jugador
-  - Máquina vs Máquina
-- Elección de personaje: Gato o Ratón (cuando hay jugador humano).
-- Algoritmo Minimax con profundidad ajustable.
-- Decoración visual del tablero con emojis para fácil lectura.
-- Control de turnos y límite máximo para evitar partidas infinitas.
-- Evaluaciones heurísticas para decisiones inteligentes del gato y ratón.
-
----
-
-## Cómo jugar
-
-1. Ejecuta el script en un entorno Python 3.
-2. Elige el modo de juego:
-   - `1` para Jugador vs Máquina
-   - `2` para Jugador vs Jugador
-   - `3` para Máquina vs Máquina
-3. Si juegas contra la máquina, elige tu personaje: Gato o Ratón.
-4. El tablero se genera aleatoriamente con obstáculos, gato, ratón y queso.
-5. El juego avanza por turnos hasta que el gato atrape al ratón o el ratón llegue al queso, o se llegue al límite de turnos.
-
----
-
-## Requisitos
-
-- Python 3.x
-- No requiere librerías externas.
-
----
-
-## Estructura del código
-
-- **Clase `JuegoGatoRaton`**: controla toda la lógica del juego.
-- Métodos para:
-  - Generar el laberinto y ubicar elementos con balance de distancias.
-  - Imprimir el tablero con emojis.
-  - Validar movimientos y calcular distancias Manhattan.
-  - Evaluar posiciones para el gato y el ratón (funciones heurísticas).
-  - Ejecutar Minimax para decisiones de IA.
-  - Control de turnos y reglas de victoria.
-
----
-
-## 📦 Estructura del Proyecto
-
-```bash
-gato_raton/
-│
-├── juego_gato_raton.py     # Lógica principal del juego
-├── README.md               # Este archivo
-## 🚀 ¿Cómo Ejecutarlo?
-Asegurate de tener Python 3 instalado.
-```
-### Cloná el repositorio:
+## 📁 Project Structure  
+/
+├── juego-del-gatoyraton.py # Main game script
+├── README.md # This file
 
 bash
-Copiar
-Editar
-git clone https://github.com/tuusuario/gato-raton-juego.git
-cd gato-raton-juego
-Ejecutá el juego:
+Copiar código
+*(Rename filenames if they differ slightly.)*
+
+## 🕹 How to Play  
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/ManuCodello/gato_raton_minimax.git
+Enter the project folder:
 
 bash
-Copiar
-Editar
-python juego_gato_raton.py
+Copiar código
+cd gato_raton_minimax
+Ensure you have Python 3 installed:
 
-## ⚙️ Funciones Clave
-generar_laberinto(): Genera el mapa con obstáculos y coloca estratégicamente al gato, ratón y queso.
+bash
+Copiar código
+python --version
+Run the game script:
 
-verificar_balance_juego(): Asegura que la partida sea justa.
+bash
+Copiar código
+python juego-del-gatoyraton.py
+After the prompt: choose the mode (1, 2 or 3) and if relevant, choose your character (Cat or Mouse). Then play: avoid obstacles, make your moves, the AI does its moves via Minimax.
 
-minimax_gato(): Calcula el mejor movimiento del gato simulando escenarios futuros.
+🧠 What You’ll Learn from This Project
+How to generate a maze with embedded goal, obstacles and balanced start positions.
 
-evaluar_posicion_*(): Evalúa la calidad de una posición según distancias y contexto.
+How to implement Minimax algorithm to make one character react intelligently (simulate future states & pick best move).
 
-## ¿Por qué este juego?
+How to model game states (board, players, turns) and terminate game based on win/lose or turn-limit.
 
-Porque la programación no es solo escribir líneas, sino pensar estrategias y anticipar movimientos. Aquí entrenas la mente para resolver problemas y aplicar algoritmos clásicos, con un toque divertido y visual.
+How to structure Python code for game logic, keeping it modular and clean — great for your portfolio.
 
----
+🚧 Possible Future Enhancements
+Add a graphical UI (with e.g., Pygame) to make the visuals more engaging.
 
-## Para contribuir
+Implement difficulty levels (e.g., deeper Minimax for harder Cat, or special moves for Mouse).
 
-Este proyecto es un gran playground para estudiantes de programación e IA. Puedes contribuir:
+Add multiple levels/mazes with increasing complexity (larger grid, more obstacles).
 
-- Mejorando el algoritmo.
-- Añadiendo modos de dificultad.
-- Optimizando la generación del laberinto.
-- Mejorando la interfaz de usuario (por ejemplo, con GUI).
+Write unit tests covering maze generation, Minimax logic, move validity.
 
----
+Improve pathfinding heuristics (e.g., combining Minimax with A* or other search algorithms).
 
-## Contacto
-
-Si quieres compartir ideas, dudas o mejoras, ¡aquí estoy! Vamos a romperla con código, sin excusas ni vueltas.
-
----
-
-**¡Prepárate para atrapar o escapar!**
-
----
-
-*Código original y mantenido por: Manu, aprendiz y guerrero del código.*
-
-
-
+👤 Author
+Manu Codello — Computer Science Student & Aspiring Developer
+GitHub: ManuCodello
+Leveraging algorithmic thinking + project building to step into a remote programming role.
